@@ -1,0 +1,9 @@
+[user]
+	email = derntl@daim.tech
+	name = Matthias
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/matthias/.local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/matthias/.local/bin/gh auth git-credential

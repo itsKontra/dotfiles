@@ -1,0 +1,38 @@
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Caches and logs
+*.log
+*.pid
+*.sock
+*cache*
+*Cache*
+__pycache__/
+
+# Backups
+*-backup-*
+*-back-up*
+
+# Sensitive data / tokens (defense-in-depth)
+gh/hosts.yml
+*id_rsa*
+*id_ed25519*
+*.pem
+*.key
+.env
+.env.*
+token.json
+session/
+Session Storage/
+IndexedDB/
+blob_storage/
+Partitions/
+DawnCache/
+GPUCache/
+Local Storage/

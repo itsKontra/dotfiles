@@ -1,0 +1,56 @@
+body.matugen {
+  --accent: #deb7fd;
+  --accent-overlay: #5f6210;
+  
+  --primary: #c9cc70;
+  --primary-hover: #929540;
+  --navbar-accent: var(--primary);
+  
+  --background: #14140e;
+  --body-background: #14140e;
+  --navbar-background: #202019;
+  
+  --background-darker: var(--background);
+  --current-background: var(--body-background);
+  --navbar-active-background: #2b2a23;
+
+  --gradient-body-background: linear-gradient(
+    90deg,
+    var(--background-darker) -32px,
+    var(--body-background) 64px,
+    var(--body-background) 100%
+  );
+  
+  --input-background: var(--navbar-background);
+  --modal-background: var(--body-background);
+  --modal-border: var(--body-background);
+
+  --success: #deb7fd;
+  --success-hover: #a682c4;
+  --danger: #ffb4ab;
+  --danger-hover: #93000a;
+
+  --text-default: #e5e2d8;
+  --text-title: #e5e2d8;
+  --text-secondary: #c9c7b4;
+  --text-tertiary: #c9c7b4;
+  --text-hover: #c9cc70;
+
+  --text-title: #e5e2d8;
+  --action-icon: #e5e2d8;
+  --action-icon-hover: #c9cc70;
+  --action-icon-active: #929540;
+  --icons-background: #484839;
+  --icon-disabled: #c9c7b4;
+
+  --anticheat-denied: var(--danger);
+  --anticheat-broken: var(--accent);
+  --anticheat-running: var(--primary);
+  --anticheat-supported: var(--success);
+  --anticheat-planned: #c9c99d;
+
+  --neutral-06: #c9c7b4;
+  --gamecard-title-color: #e5e2d8cc;
+  --secondary-button: var(--accent);
+  --tertiary-button: var(--primary);
+}

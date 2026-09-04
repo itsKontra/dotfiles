@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=nvidia-settings
+Exec=nvidia-settings -l
+Hidden=true
+X-systemd-skip=true

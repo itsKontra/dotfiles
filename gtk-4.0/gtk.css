@@ -1,0 +1,120 @@
+/* Ryoku palette -> GTK 4 / libadwaita. Rendered by matugen; do not hand-edit.
+   Two blocks ship because libadwaita 1.6+ recolours its own widgets from CSS
+   custom properties and no longer reads @define-color for them, so the :root
+   block is what actually moves the accent off stock Adwaita blue. The
+   @define-color block below is the compat path: libadwaita < 1.6 and GTK 4 apps
+   that are not libadwaita still resolve their colours through named colours, so
+   both forms are emitted and carry identical values. Roles are Material 3 names,
+   the same ones the shell paints with, so a wallpaper scheme reaches the whole
+   app suite with one shared semantics rather than a base16 approximation. */
+
+:root {
+  --accent-bg-color: #c9cc70;
+  --accent-fg-color: #313300;
+  --accent-color: #c9cc70;
+  --destructive-bg-color: #ffb4ab;
+  --destructive-fg-color: #690005;
+  --destructive-color: #ffb4ab;
+  --success-bg-color: #c9c99d;
+  --success-fg-color: #313213;
+  --success-color: #c9c99d;
+  --warning-bg-color: #deb7fd;
+  --warning-fg-color: #40215c;
+  --warning-color: #deb7fd;
+  --error-bg-color: #ffb4ab;
+  --error-fg-color: #690005;
+  --error-color: #ffb4ab;
+  --window-bg-color: #14140e;
+  --window-fg-color: #e5e2d8;
+  --view-bg-color: #14140e;
+  --view-fg-color: #e5e2d8;
+  --headerbar-bg-color: #202019;
+  --headerbar-fg-color: #e5e2d8;
+  --headerbar-border-color: #484839;
+  --headerbar-backdrop-color: #14140e;
+  --sidebar-bg-color: #1c1c16;
+  --sidebar-fg-color: #e5e2d8;
+  --sidebar-backdrop-color: #14140e;
+  --secondary-sidebar-bg-color: #0e0e09;
+  --secondary-sidebar-fg-color: #e5e2d8;
+  --secondary-sidebar-backdrop-color: #14140e;
+  --card-bg-color: #1c1c16;
+  --card-fg-color: #e5e2d8;
+  --dialog-bg-color: #2b2a23;
+  --dialog-fg-color: #e5e2d8;
+  --popover-bg-color: #202019;
+  --popover-fg-color: #e5e2d8;
+  --thumbnail-bg-color: #2b2a23;
+  --thumbnail-fg-color: #e5e2d8;
+  --scrollbar-outline-color: #484839;
+}
+
+@define-color accent_bg_color #c9cc70;
+@define-color accent_fg_color #313300;
+@define-color accent_color #c9cc70;
+@define-color destructive_bg_color #ffb4ab;
+@define-color destructive_fg_color #690005;
+@define-color destructive_color #ffb4ab;
+@define-color success_bg_color #c9c99d;
+@define-color success_fg_color #313213;
+@define-color success_color #c9c99d;
+@define-color warning_bg_color #deb7fd;
+@define-color warning_fg_color #40215c;
+@define-color warning_color #deb7fd;
+@define-color error_bg_color #ffb4ab;
+@define-color error_fg_color #690005;
+@define-color error_color #ffb4ab;
+@define-color window_bg_color #14140e;
+@define-color window_fg_color #e5e2d8;
+@define-color view_bg_color #14140e;
+@define-color view_fg_color #e5e2d8;
+@define-color headerbar_bg_color #202019;
+@define-color headerbar_fg_color #e5e2d8;
+@define-color headerbar_border_color #484839;
+@define-color headerbar_backdrop_color #14140e;
+@define-color sidebar_bg_color #1c1c16;
+@define-color sidebar_fg_color #e5e2d8;
+@define-color sidebar_backdrop_color #14140e;
+@define-color secondary_sidebar_bg_color #0e0e09;
+@define-color secondary_sidebar_fg_color #e5e2d8;
+@define-color secondary_sidebar_backdrop_color #14140e;
+@define-color card_bg_color #1c1c16;
+@define-color card_fg_color #e5e2d8;
+@define-color dialog_bg_color #2b2a23;
+@define-color dialog_fg_color #e5e2d8;
+@define-color popover_bg_color #202019;
+@define-color popover_fg_color #e5e2d8;
+@define-color thumbnail_bg_color #2b2a23;
+@define-color thumbnail_fg_color #e5e2d8;
+@define-color scrollbar_outline_color #484839;
+
+/* Shades are the palette scrim at a fixed alpha, not a flat role, because the
+   toolkit paints them as translucent overlays for edges and elevation and they
+   must read through whatever surface happens to sit beneath them. */
+@define-color shade_color alpha(#000000, 0.16);
+@define-color headerbar_shade_color alpha(#000000, 0.36);
+@define-color headerbar_darker_shade_color alpha(#000000, 0.36);
+@define-color sidebar_shade_color alpha(#000000, 0.16);
+@define-color secondary_sidebar_shade_color alpha(#000000, 0.16);
+@define-color card_shade_color alpha(#000000, 0.16);
+@define-color popover_shade_color alpha(#000000, 0.16);
+
+/* Classic GTK 3 named palette, so non-libadwaita GTK 4 apps that still read the
+   old theme_* / borders names track the scheme as well. */
+@define-color theme_bg_color #14140e;
+@define-color theme_fg_color #e5e2d8;
+@define-color theme_base_color #14140e;
+@define-color theme_text_color #e5e2d8;
+@define-color theme_selected_bg_color #c9cc70;
+@define-color theme_selected_fg_color #313300;
+@define-color theme_unfocused_bg_color #14140e;
+@define-color theme_unfocused_fg_color #e5e2d8;
+@define-color theme_unfocused_base_color #14140e;
+@define-color theme_unfocused_text_color #e5e2d8;
+@define-color theme_unfocused_selected_bg_color #c9cc70;
+@define-color theme_unfocused_selected_fg_color #313300;
+@define-color insensitive_bg_color #202019;
+@define-color insensitive_fg_color #c9c7b4;
+@define-color insensitive_base_color #14140e;
+@define-color borders #484839;
+@define-color unfocused_borders #484839;

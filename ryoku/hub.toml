@@ -1,0 +1,4 @@
+[ui]
+  section = "windows"
+  update_interval = "daily"
+  advanced = "0"
