@@ -194,7 +194,7 @@
     }
   },
   "hubDecor": "calm",
-  "launcherTarget": "studio",
+  "launcherTarget": "quick",
   "menus": {
     "clipboard_menu": {
       "minimum_width": 410,
@@ -362,20 +362,20 @@
     "launcherLogoMode": "icon",
     "layout": {
       "center": [
-        "clock"
+        "clock",
+        "media"
       ],
       "left": [
         "launcher",
         "workspaces",
         "status",
         "cpu",
-        "volume",
         "memory",
+        "volume",
         "ai"
       ],
       "right": [
-        "media",
-        "quick",
+        "bluetooth",
         "network",
         "power",
         "battery",
@@ -383,7 +383,7 @@
         "cputemp",
         "storage",
         "gpu",
-        "bluetooth",
+        "quick",
         "layout"
       ],
       "version": 1
@@ -394,13 +394,13 @@
     "widgetGeom": {},
     "widgets": {
       "battery": true,
-      "bluetooth": false,
+      "bluetooth": true,
       "brightness": true,
       "claude": false,
       "cpu": true,
       "cpuTemperature": true,
       "gpu": true,
-      "layout": true,
+      "layout": false,
       "media": true,
       "memory": true,
       "mpris": true,
@@ -408,7 +408,7 @@
       "power": false,
       "quick": true,
       "status": true,
-      "storage": true,
+      "storage": false,
       "volume": true,
       "weather": true
     },

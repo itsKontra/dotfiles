@@ -3,7 +3,7 @@
 -- after Ryoku's defaults and before your user.lua, which still wins.
 
 hl.config({
-  general = { gaps_in = 5, gaps_out = 12, border_size = 1 },
+  general = { gaps_in = 5, gaps_out = 12, border_size = 1, layout = "scrolling" },
   decoration = { shadow = { enabled = false } },
   input = { kb_layout = "de", kb_variant = "nodeadkeys", kb_options = "" },
   animations = { enabled = false },
@@ -15,3 +15,10 @@ do
   hl.config({ general = { ["col.active_border"] = { colors = { rgb(ok and wc and wc.active, "#e0563b"), rgb(ok and wc and wc.inactive, "#313a4d") }, angle = 45 } } })
 end
 hl.animation({ leaf = "borderangle", enabled = true, speed = 80.0, bezier = "linear", style = "loop" })
+hl.env("BROWSER", "chromium")
+hl.env("TERMINAL", "kitty")
+
+hl.config({ scrolling = { column_width = 0.45 } })
+
+hl.config({ input = { follow_mouse = 1 } })
+

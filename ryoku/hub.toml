@@ -1,4 +1,4 @@
 [ui]
-  section = "windows"
+  section = "animations"
   update_interval = "daily"
-  advanced = "0"
+  advanced = "1"

@@ -22,7 +22,7 @@
     "glowRange": 10,
     "glowColor": "#ee33cc",
     "animations": false,
-    "layout": "dwindle",
+    "layout": "scrolling",
     "activeBorder": "#e0563b",
     "inactiveBorder": "#313a4d",
     "resizeOnBorder": true,
@@ -150,8 +150,13 @@
       "slide": 20
     },
     "hyprscrolling": {
-      "columnWidth": 0.5,
+      "columnWidth": 0.45,
       "followFocus": true
     }
+  },
+  "apps": {
+    "browser": "chromium",
+    "files": "kitty -e yazi",
+    "terminal": "kitty"
   }
 }
