@@ -1,5 +1,11 @@
 {
   "matugen": {
     "mode": "dark"
+  },
+  "components": {
+    "wallpaperSelector": {
+      "enabled": true,
+      "displayMode": "wall"
+    }
   }
 }

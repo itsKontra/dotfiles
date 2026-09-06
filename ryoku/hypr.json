@@ -149,8 +149,14 @@
       "bounce": 0.95,
       "slide": 20
     },
+    "keysounds": {
+      "enabled": false,
+      "profile": "cherry-mx-brown",
+      "volume": 0.6,
+      "release": true
+    },
     "hyprscrolling": {
-      "columnWidth": 0.45,
+      "columnWidth": 0.47,
       "followFocus": true
     }
   },

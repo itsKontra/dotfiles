@@ -18,7 +18,7 @@ hl.animation({ leaf = "borderangle", enabled = true, speed = 80.0, bezier = "lin
 hl.env("BROWSER", "chromium")
 hl.env("TERMINAL", "kitty")
 
-hl.config({ scrolling = { column_width = 0.45 } })
+hl.config({ scrolling = { column_width = 0.47 } })
 
 hl.config({ input = { follow_mouse = 1 } })
 

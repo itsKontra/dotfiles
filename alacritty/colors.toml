@@ -1,67 +1,67 @@
 # Ryoku palette -> Alacritty. Rendered by matugen; do not edit.
 
 [colors.primary]
-background = '#14140e'
-foreground = '#e5e2d8'
+background = '#1E2326'
+foreground = '#D3C6AA'
 
 [colors.cursor]
-text = '#14140e'
-cursor = '#e5e2d8'
+text = '#1E2326'
+cursor = '#D3C6AA'
 
 [colors.vi_mode_cursor]
-text = '#14140e'
-cursor = '#c9cc70'
+text = '#1E2326'
+cursor = '#A7C080'
 
 [colors.selection]
-text = '#14140e'
-background = '#c9cc70'
+text = '#1E2326'
+background = '#A7C080'
 
 [colors.search.matches]
-foreground = '#14140e'
-background = '#deb7fd'
+foreground = '#1E2326'
+background = '#83C092'
 
 [colors.search.focused_match]
-foreground = '#14140e'
-background = '#c9cc70'
+foreground = '#1E2326'
+background = '#A7C080'
 
 [colors.footer_bar]
-foreground = '#e5e2d8'
-background = '#202019'
+foreground = '#D3C6AA'
+background = '#2E383C'
 
 [colors.hints.start]
-foreground = '#14140e'
-background = '#deb7fd'
+foreground = '#1E2326'
+background = '#83C092'
 
 [colors.hints.end]
-foreground = '#14140e'
-background = '#deb7fd'
+foreground = '#1E2326'
+background = '#83C092'
 
 [colors.normal]
-black = '#14140e'
-red = '#ffb4ab'
-green = '#c9cc70'
-yellow = '#deb7fd'
-blue = '#c9c99d'
-magenta = '#c9cc70'
-cyan = '#deb7fd'
-white = '#e5e2d8'
+black = '#1E2326'
+red = '#E67E80'
+green = '#A7C080'
+yellow = '#83C092'
+blue = '#7FBBB3'
+magenta = '#A7C080'
+cyan = '#83C092'
+white = '#D3C6AA'
 
 [colors.bright]
-black = '#939180'
-red = '#ffb4ab'
-green = '#c9cc70'
-yellow = '#deb7fd'
-blue = '#c9c99d'
-magenta = '#c9cc70'
-cyan = '#939180'
-white = '#000000'
+black = '#7A8478'
+red = '#E67E80'
+green = '#A7C080'
+yellow = '#83C092'
+blue = '#7FBBB3'
+magenta = '#A7C080'
+cyan = '#7A8478'
+white = '#A7C080'
 
 [colors.dim]
-black = '#14140e'
-red = '#ffb4ab'
-green = '#c9cc70'
-yellow = '#deb7fd'
-blue = '#c9c99d'
-magenta = '#c9cc70'
-cyan = '#deb7fd'
-white = '#e5e2d8'
+black = '#1E2326'
+red = '#E67E80'
+green = '#A7C080'
+yellow = '#83C092'
+blue = '#7FBBB3'
+magenta = '#A7C080'
+cyan = '#83C092'
+white = '#D3C6AA'
