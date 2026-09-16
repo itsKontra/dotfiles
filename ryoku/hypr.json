@@ -101,9 +101,22 @@
     "hideOnKeyPress": false
   },
   "env": [],
-  "windowRules": [],
+  "windowRules": [
+    {
+      "class": "",
+      "title": "navi",
+      "action": "float",
+      "value": ""
+    }
+  ],
   "autostart": [],
-  "keybinds": [],
+  "keybinds": [
+    {
+      "keys": "SUPER + Y",
+      "action": "exec",
+      "value": "kitty --class floating_navi -T \"navi\" -e navi"
+    }
+  ],
   "anim": {
     "items": [],
     "curves": []
@@ -163,6 +176,7 @@
   "apps": {
     "browser": "chromium",
     "files": "kitty -e yazi",
+    "notes": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=obsidian.sh --file-forwarding md.obsidian.Obsidian @@u @@",
     "terminal": "kitty"
   }
 }

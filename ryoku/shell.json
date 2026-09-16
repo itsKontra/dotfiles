@@ -381,6 +381,7 @@
       ],
       "right": [
         "bluetooth",
+        "bluetooth-profiles",
         "network",
         "power",
         "battery",

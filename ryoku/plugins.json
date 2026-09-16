@@ -1,0 +1,10 @@
+{
+  "bluetooth-profiles": {
+    "enabled": true,
+    "host": "topbarGlyph",
+    "settings": {
+      "barBadge": "codec",
+      "autoExpand": true
+    }
+  }
+}

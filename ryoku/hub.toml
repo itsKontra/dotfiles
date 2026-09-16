@@ -1,4 +1,4 @@
 [ui]
-  section = "windows"
-  update_interval = "daily"
+  section = "updates"
+  update_interval = "weekly"
   advanced = "1"

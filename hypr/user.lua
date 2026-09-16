@@ -18,3 +18,7 @@
 -- hl.bind("SUPER + SHIFT + T", hl.dsp.exec_cmd("kitty"))
 -- hl.window_rule({ name = "float-mpv", match = { class = "mpv" }, float = true })
 -- hl.config({ general = { border_size = 3 } })
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd("[workspace special:scratch silent] flatpak run com.spotify.Client")
+end)

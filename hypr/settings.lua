@@ -18,6 +18,8 @@ hl.animation({ leaf = "borderangle", enabled = true, speed = 80.0, bezier = "lin
 hl.env("BROWSER", "chromium")
 hl.env("TERMINAL", "kitty")
 
+hl.window_rule({ name = "ryoku-user-1", match = { title = "navi" }, float = true })
+hl.bind("SUPER + Y", hl.dsp.exec_cmd("kitty --class floating_navi -T \"navi\" -e navi"))
 hl.config({ scrolling = { column_width = 0.47 } })
 
 hl.config({ input = { follow_mouse = 1 } })
