@@ -3,24 +3,43 @@
 -- after Ryoku's defaults and before your user.lua, which still wins.
 
 hl.config({
-  general = { gaps_in = 5, gaps_out = 12, border_size = 1, layout = "scrolling" },
-  decoration = { shadow = { enabled = false } },
-  input = { kb_layout = "de", kb_variant = "nodeadkeys", kb_options = "" },
+  general = { gaps_in = 6, border_size = 0, resize_on_border = false, ["col.active_border"] = "rgb(e0563b)", ["col.inactive_border"] = "rgb(313a4d)" },
+  decoration = { border_part_of_window = false, blur = { special = true, popups = true }, shadow = { enabled = false } },
+  input = { kb_layout = "de", kb_variant = "nodeadkeys", kb_options = "", numlock_by_default = true },
+  cursor = { hide_on_key_press = true },
   animations = { enabled = false },
 })
 
-do
-  local ok, wc = pcall(dofile, os.getenv("HOME") .. "/.cache/ryoku/hypr-colors.lua")
-  local function rgb(h, f) if type(h) ~= "string" then h = f end return "rgb(" .. h:gsub("#", "") .. ")" end
-  hl.config({ general = { ["col.active_border"] = { colors = { rgb(ok and wc and wc.active, "#e0563b"), rgb(ok and wc and wc.inactive, "#313a4d") }, angle = 45 } } })
-end
-hl.animation({ leaf = "borderangle", enabled = true, speed = 80.0, bezier = "linear", style = "loop" })
-hl.env("BROWSER", "chromium")
+hl.curve("ryokuWobble", { type = "bezier", points = { { 0.34, 1.56 }, { 0.64, 1.0 } } })
+hl.curve("ryokuBloom", { type = "bezier", points = { { 0.16, 1.12 }, { 0.24, 1.0 } } })
+hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1.0 } } })
+hl.curve("snap", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
+hl.curve("ryokuSettle", { type = "bezier", points = { { 0.18, 0.86 }, { 0.24, 1.0 } } })
+hl.curve("quick", { type = "bezier", points = { { 0.15, 0.0 }, { 0.1, 1.0 } } })
+hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1.0 }, { 0.32, 1.0 } } })
+hl.curve("linear", { type = "bezier", points = { { 0.0, 0.0 }, { 1.0, 1.0 } } })
+hl.curve("default", { type = "bezier", points = { { 0.0, 0.75 }, { 0.15, 1.0 } } })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 3.2, bezier = "ryokuSettle" })
+hl.animation({ leaf = "shadowangle", enabled = false, speed = 1.0, bezier = "default" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 6.0, bezier = "easeOutQuint", style = "slidefadevert 20%" })
+hl.animation({ leaf = "glowangle", enabled = false, speed = 1.0, bezier = "default" })
+hl.animation({ leaf = "borderangle", enabled = false, speed = 1.0, bezier = "default" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 2.2, bezier = "almostLinear" })
+hl.animation({ leaf = "fade", enabled = true, speed = 3.0, bezier = "almostLinear" })
+hl.animation({ leaf = "border", enabled = true, speed = 3.5, bezier = "quick" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "easeOutQuint", style = "slide" })
+hl.animation({ leaf = "global", enabled = true, speed = 3.2, bezier = "ryokuSettle" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 3.8, bezier = "ryokuBloom", style = "popin 78%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 2.4, bezier = "ryokuSettle", style = "popin 86%" })
+hl.animation({ leaf = "layers", enabled = true, speed = 7.0, bezier = "easeOutQuint", style = "popin 90%" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 3.2, bezier = "almostLinear" })
+hl.animation({ leaf = "windows", enabled = true, speed = 3.2, bezier = "ryokuSettle" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 7.0, bezier = "easeOutQuint" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 7.0, bezier = "easeOutQuint" })
+
+hl.env("BROWSER", "firefox")
 hl.env("TERMINAL", "kitty")
 
-hl.window_rule({ name = "ryoku-user-1", match = { title = "navi" }, float = true })
-hl.bind("SUPER + Y", hl.dsp.exec_cmd("kitty --class floating_navi -T \"navi\" -e navi"))
-hl.config({ scrolling = { column_width = 0.47 } })
-
-hl.config({ input = { follow_mouse = 1 } })
-
+hl.window_rule({ name = "ryoku-tame-maximize-on-open", match = { class = ".*" }, suppress_event = "maximize" })
+hl.window_rule({ name = "ryoku-user-1", match = { title = "1Password" }, float = true })
+hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("1password"))

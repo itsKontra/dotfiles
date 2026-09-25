@@ -1,67 +1,67 @@
 # Ryoku palette -> Alacritty. Rendered by matugen; do not edit.
 
 [colors.primary]
-background = '#1E2326'
-foreground = '#D3C6AA'
+background = '#191724'
+foreground = '#E0DEF4'
 
 [colors.cursor]
-text = '#1E2326'
-cursor = '#D3C6AA'
+text = '#191724'
+cursor = '#E0DEF4'
 
 [colors.vi_mode_cursor]
-text = '#1E2326'
-cursor = '#A7C080'
+text = '#191724'
+cursor = '#C4A7E7'
 
 [colors.selection]
-text = '#1E2326'
-background = '#A7C080'
+text = '#191724'
+background = '#C4A7E7'
 
 [colors.search.matches]
-foreground = '#1E2326'
-background = '#83C092'
+foreground = '#191724'
+background = '#EBBCBA'
 
 [colors.search.focused_match]
-foreground = '#1E2326'
-background = '#A7C080'
+foreground = '#191724'
+background = '#C4A7E7'
 
 [colors.footer_bar]
-foreground = '#D3C6AA'
-background = '#2E383C'
+foreground = '#E0DEF4'
+background = '#26233A'
 
 [colors.hints.start]
-foreground = '#1E2326'
-background = '#83C092'
+foreground = '#191724'
+background = '#EBBCBA'
 
 [colors.hints.end]
-foreground = '#1E2326'
-background = '#83C092'
+foreground = '#191724'
+background = '#EBBCBA'
 
 [colors.normal]
-black = '#1E2326'
-red = '#E67E80'
-green = '#A7C080'
-yellow = '#83C092'
-blue = '#7FBBB3'
-magenta = '#A7C080'
-cyan = '#83C092'
-white = '#D3C6AA'
+black = '#191724'
+red = '#EB6F92'
+green = '#C4A7E7'
+yellow = '#EBBCBA'
+blue = '#9CCFD8'
+magenta = '#C4A7E7'
+cyan = '#EBBCBA'
+white = '#E0DEF4'
 
 [colors.bright]
-black = '#7A8478'
-red = '#E67E80'
-green = '#A7C080'
-yellow = '#83C092'
-blue = '#7FBBB3'
-magenta = '#A7C080'
-cyan = '#7A8478'
-white = '#A7C080'
+black = '#6E6A86'
+red = '#EB6F92'
+green = '#C4A7E7'
+yellow = '#EBBCBA'
+blue = '#9CCFD8'
+magenta = '#C4A7E7'
+cyan = '#6E6A86'
+white = '#C4A7E7'
 
 [colors.dim]
-black = '#1E2326'
-red = '#E67E80'
-green = '#A7C080'
-yellow = '#83C092'
-blue = '#7FBBB3'
-magenta = '#A7C080'
-cyan = '#83C092'
-white = '#D3C6AA'
+black = '#191724'
+red = '#EB6F92'
+green = '#C4A7E7'
+yellow = '#EBBCBA'
+blue = '#9CCFD8'
+magenta = '#C4A7E7'
+cyan = '#EBBCBA'
+white = '#E0DEF4'

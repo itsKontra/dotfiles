@@ -1,39 +1,39 @@
 /* Matugen OBS Studio Theme */
 @qdata {
-  bg: #1E2326;
-  fg: #D3C6AA;
-  surface: #1E2326;
-  primary: #A7C080;
-  accent: #7FBBB3;
+  bg: #191724;
+  fg: #E0DEF4;
+  surface: #191724;
+  primary: #C4A7E7;
+  accent: #9CCFD8;
 }
 
 QWidget {
-  background-color: #1E2326;
-  color: #D3C6AA;
+  background-color: #191724;
+  color: #E0DEF4;
 }
 
 QDockWidget {
   titlebar-close-icon: url(close.png);
   titlebar-normal-icon: url(undock.png);
-  background-color: #1E2326;
-  color: #D3C6AA;
+  background-color: #191724;
+  color: #E0DEF4;
 }
 
 QPushButton {
-  background-color: #2E383C;
-  color: #A7C080;
-  border: 1px solid #7A8478;
+  background-color: #26233A;
+  color: #C4A7E7;
+  border: 1px solid #6E6A86;
   border-radius: 4px;
   padding: 4px 8px;
 }
 
 QPushButton:hover {
-  background-color: #A7C080;
-  color: #1E2326;
+  background-color: #C4A7E7;
+  color: #191724;
 }
 
 QListWidget, QTreeWidget, QTextEdit {
-  background-color: #262e31;
-  color: #D3C6AA;
-  border: 1px solid #4c544f;
+  background-color: #1F1D2E;
+  color: #E0DEF4;
+  border: 1px solid #403D52;
 }

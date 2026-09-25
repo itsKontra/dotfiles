@@ -1,11 +1,17 @@
 -- A floating window sized past the monitor reads as a broken fullscreen (issue
 -- 147: Files on a 1366x768 panel). Every fixed size below is capped to the
 -- monitor the window opens on; Hyprland evaluates the expressions per window.
+-- `page()` is the one exception: a full-page surface (Ryoku Settings) asks for
+-- 99% of the monitor, so it stays proportional to whatever screen it opens on.
 local function fit(w, h)
     return {
         "min(" .. w .. ", monitor_w * 0.92)",
         "min(" .. h .. ", monitor_h * 0.88)",
     }
+end
+
+local function page()
+    return { "monitor_w * 0.99", "monitor_h * 0.96" }
 end
 
 hl.window_rule({
@@ -70,7 +76,7 @@ hl.window_rule({
 	name   = "float-ryoku-settings",
 	match  = { title = "^(Ryoku Settings)$" },
 	float  = true,
-	size   = fit(1360, 880),
+	size   = page(),
 	center = true,
 })
 
@@ -170,7 +176,7 @@ hl.window_rule({
     immediate    = true,
 })
 
--- Ryotunes, the music app ([ryoku] package, neur0map/ryotunes). Float it like
+-- Ryotunes, the music app ([ryoku] package, ryoku-dev/ryotunes). Float it like
 -- the other music players (Spotify above); the app sizes and centres its own
 -- floating window. The Tauri app maps with class "ryotunes"; the native
 -- Quickshell client (ryotunes-qml) maps with Quickshell's class and the title

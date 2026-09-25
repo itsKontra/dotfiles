@@ -4,24 +4,24 @@ This folder mirrors ~/.config. A file you put here is laid on top of Ryoku's own
 copy on every update, so it wins and survives while Ryoku's base file keeps
 getting fixes underneath. Empty is fine.
 
-Use the overlay for one thing: FORK a whole Ryoku file you want to fully own.
+Use the overlay to FORK a whole Ryoku file you want to fully own: copy it here at
+the same path and edit it. ryoku doctor then warns when an update changes the
+original, and ryoku reset <path> hands it back.
 
-    Copy it here at the same path and edit it, e.g.
-        ~/.config/ryoku/user_edits/hypr/modules/binds.lua
-    ryoku doctor then warns when an update changes the original, and
-    ryoku reset hypr/modules/binds.lua hands it back.
+Ryoku Settings (Super + ,) writes these here; change them in the GUI, not by
+hand:
 
-Ryoku Settings (Super + ,) writes hypr/settings.lua and hypr/rebinds.lua here.
-Change those in the GUI, not by hand.
+    ~/.config/hypr/settings.lua
+    ~/.config/hypr/rebinds.lua
 
 --- Simple tweaks do NOT go here -----------------------------------------
 
 Edit the tool's own user file at its normal place. Ryoku never overwrites these,
 so your edits always survive an update:
 
-    ~/.config/hypr/user.lua           Hyprland binds, window rules, raw config
-    ~/.config/hypr/monitors_user.lua  pin a display (see monitors_user.lua.example)
-    ~/.config/kitty/user.conf         your kitty overrides
+    ~/.config/hypr/user.lua
+    ~/.config/hypr/monitors_user.lua
+    ~/.config/kitty/user.conf
 
 Putting one of those in this overlay is the old, broken way: the overlay froze a
 copy and re-laid it over your live file every update, wiping later edits. If you

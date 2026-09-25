@@ -1,135 +1,111 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    // To change to an image logo
-    //  Uncomment the `//` on the lines from type to width
-    // "type": "kitty",
-    // "source": "~/.config/fastfetch/images/ubuntu.png",
-    // "height": 10,
-    // "width": 20,
-    // If using an image logo then comment out the next line "type": "small"
-    // Otherwise the image logo will not be displayed
-    "type": "small",
+    "type": "kitty-direct",
+    "source": "~/.local/share/ryoku/assets/brand/logo-mark.png",
+    "width": 28,
+    "height": 14,
     "padding": {
-      "top": 3,
-      "left": 1,
+      "left": 3,
+      "right": 5,
+      "top": 5
+    }
+  },
+  "display": {
+    "color": {
+      "keys": "38;2;226;52;42",
+      "separator": "#8f8770",
+      "title": "#f3ede1"
     },
+    "key": {
+      "width": 9
+    },
+    "percent": {
+      "color": {
+        "green": "#7fbf6a",
+        "red": "#e2342a",
+        "yellow": "#d9a441"
+      },
+      "type": 9
+    },
+    "separator": "  "
   },
   "modules": [
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Hardware────────────────────────────┐",
+      "type": "title",
+      "format": "{#1;title}{user-name}{#}{#separator} @ {#}{#1;title}{host-name}{#}"
     },
     {
-      "type": "host",
-      "key": " PC",
-      "keyColor": "green",
-    },
-    {
-      "type": "cpu",
-      "key": "│ ├",
-      "keyColor": "green",
-    },
-    {
-      "type": "gpu",
-      "key": "│ ├󰍛",
-      "keyColor": "green",
-    },
-    {
-      "type": "memory",
-      "key": "│ ├󰍛",
-      "keyColor": "green",
-    },
-    {
-      "type": "disk",
-      "key": "└ └",
-      "keyColor": "green",
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└──────────────────────────────────────────────────────────┘",
+      "format": "\u001b[38;2;226;52;42m■\u001b[0m \u001b[38;2;143;135;112m{#keys}■{#} {#separator}RYOKU · 力 · a hand-built Arch desktop{#}\u001b[0m",
+      "type": "custom"
     },
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌──────────────────────Software──────────────────────┐",
+      "format": "\u001b[38;2;226;52;42m──\u001b[0m \u001b[1;38;2;243;237;225m{#keys}──{#} {#1;title}VITALS{#} {#38;2;58;46;36}──────────────────────────{#}\u001b[0m \u001b[38;2;58;46;36m────\u001b[0m",
+      "type": "custom"
     },
     {
-      "type": "os",
-      "key": " OS",
-      "keyColor": "yellow",
+      "key": "CPU",
+      "type": "cpu"
     },
     {
-      "type": "kernel",
-      "key": "│ ├",
-      "keyColor": "yellow",
+      "detectionMethod": "pci",
+      "key": "GPU",
+      "type": "gpu"
     },
     {
-      "type": "bios",
-      "key": "│ ├",
-      "keyColor": "yellow",
+      "key": "MEMORY",
+      "type": "memory"
     },
     {
-      "type": "packages",
-      "key": "│ ├󰏖",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "shell",
-      "key": "└ └",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "wm",
-      "key": " WM",
-      "keyColor": "blue",
-    },
-    {
-      "type": "lm",
-      "key": "│ ├",
-      "keyColor": "blue",
-    },
-    {
-      "type": "wmtheme",
-      "key": "│ ├󰉼",
-      "keyColor": "blue",
-    },
-    {
-      "type": "terminal",
-      "key": "└ └",
-      "keyColor": "blue",
-    },
-    {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘",
+      "key": "DISK",
+      "type": "disk"
     },
     "break",
     {
-      "type": "custom",
-      "format": "\u001b[90m┌─────────────────Uptime / Age / DT──────────────────┐",
+      "format": "\u001b[38;2;226;52;42m──\u001b[0m \u001b[1;38;2;243;237;225m{#keys}──{#} {#1;title}SYSTEM{#} {#38;2;58;46;36}──────────────────────────{#}\u001b[0m \u001b[38;2;58;46;36m────\u001b[0m",
+      "type": "custom"
     },
     {
-      "type": "command",
-      "key": "                   OS Age ",
-      "keyColor": "magenta",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "key": "OS",
+      "type": "os"
     },
     {
-      "type": "uptime",
-      "key": "                   Uptime ",
-      "keyColor": "magenta",
+      "key": "KERNEL",
+      "type": "kernel"
     },
     {
-      "type": "command",
-      "key": "             KoolDots Ver ",
-      "text": "echo v${DOTS_VERSION}",
-      "keyColor": "magenta",
+      "key": "WM",
+      "type": "wm"
     },
     {
-      "type": "custom",
-      "format": "\u001b[90m└────────────────────────────────────────────────────┘",
+      "key": "SHELL",
+      "type": "shell"
+    },
+    {
+      "key": "PKGS",
+      "type": "packages"
     },
     "break",
-  ],
+    {
+      "format": "\u001b[38;2;226;52;42m──\u001b[0m \u001b[1;38;2;243;237;225m{#keys}──{#} {#1;title}SESSION{#} {#38;2;58;46;36}─────────────────────────{#}\u001b[0m \u001b[38;2;58;46;36m────\u001b[0m",
+      "type": "custom"
+    },
+    {
+      "key": "UPTIME",
+      "type": "uptime"
+    },
+    {
+      "key": "TERM",
+      "type": "terminal"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 2
+    },
+    "break"
+  ]
 }

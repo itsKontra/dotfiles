@@ -1,52 +1,39 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+#
+# .zshrc is sourced in interactive shells.
+# It should contain commands to set up aliases,
+# functions, options, key bindings, etc.
+#
 
-export ZSH="$HOME/.oh-my-zsh"
+autoload -U compinit
+compinit
 
-ZSH_THEME="agnosterzak"
+#allow tab completion in the middle of a word
+setopt COMPLETE_IN_WORD
 
-plugins=( 
-    git
-    dnf
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
+## keep background processes at full speed
+#setopt NOBGNICE
+## restart running processes on exit
+#setopt HUP
 
-source $ZSH/oh-my-zsh.sh
+## history
+#setopt APPEND_HISTORY
+## for sharing history between zsh processes
+#setopt INC_APPEND_HISTORY
+#setopt SHARE_HISTORY
 
-# check the dnf plugins commands here
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf
+## never ever beep ever
+#setopt NO_BEEP
 
+## automatically decide when to page a list of completions
+#LISTMAX=0
 
-# Display Pokemon-colorscripts
-# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
-#pokemon-colorscripts --no-title -s -r #without fastfetch
-#pokemon-colorscripts --no-title -s -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
+## disable mail checking
+#MAILCHECK=0
 
-# fastfetch. Will be disabled if above colorscript was chosen to install
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
-
-# Set-up FZF key bindings (CTRL R for fuzzy history finder)
-source <(fzf --zsh)
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
-
-# Set-up icons for files/directories in terminal using lsd
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias ssh="kitty +kitten ssh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# autoload -U colors
+#colors
+[ -r "$HOME/.config/zsh/ryoku.zsh" ] && . "$HOME/.config/zsh/ryoku.zsh"
 
 
 # Added by Antigravity CLI installer
 export PATH="/home/matthias/.local/bin:$PATH"
-[ -r "$HOME/.config/zsh/ryoku.zsh" ] && . "$HOME/.config/zsh/ryoku.zsh"

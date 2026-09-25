@@ -4,88 +4,88 @@
 # file is the daemon's alone and clobbers nothing you wrote.
 
 [mgr]
-cwd = { fg = "#7FBBB3" }
+cwd = { fg = "#9CCFD8" }
 
-hovered = { fg = "#A7C080", bg = "#2E383C" }
+hovered = { fg = "#C4A7E7", bg = "#26233A" }
 preview_hovered = { underline = true }
 
-find_keyword = { fg = "#83C092", bold = true }
-find_position = { fg = "#7FBBB3", bold = true }
+find_keyword = { fg = "#EBBCBA", bold = true }
+find_position = { fg = "#9CCFD8", bold = true }
 
-marker_copied = { fg = "#83C092", bg = "#83C092" }
-marker_cut = { fg = "#E67E80", bg = "#E67E80" }
-marker_marked = { fg = "#7FBBB3", bg = "#7FBBB3" }
-marker_selected = { fg = "#A7C080", bg = "#A7C080" }
+marker_copied = { fg = "#EBBCBA", bg = "#EBBCBA" }
+marker_cut = { fg = "#EB6F92", bg = "#EB6F92" }
+marker_marked = { fg = "#9CCFD8", bg = "#9CCFD8" }
+marker_selected = { fg = "#C4A7E7", bg = "#C4A7E7" }
 
-tab_active = { fg = "#1E2326", bg = "#A7C080" }
-tab_inactive = { fg = "#9DA9A0", bg = "#2E383C" }
+tab_active = { fg = "#191724", bg = "#C4A7E7" }
+tab_inactive = { fg = "#908CAA", bg = "#26233A" }
 
 border_symbol = "│"
-border_style = { fg = "#4c544f" }
+border_style = { fg = "#403D52" }
 
 [mode]
-normal_main = { fg = "#1E2326", bg = "#A7C080", bold = true }
-normal_alt = { fg = "#A7C080", bg = "#2E383C" }
-select_main = { fg = "#1E2326", bg = "#83C092", bold = true }
-select_alt = { fg = "#83C092", bg = "#2E383C" }
-unset_main = { fg = "#1E2326", bg = "#E67E80", bold = true }
-unset_alt = { fg = "#E67E80", bg = "#2E383C" }
+normal_main = { fg = "#191724", bg = "#C4A7E7", bold = true }
+normal_alt = { fg = "#C4A7E7", bg = "#26233A" }
+select_main = { fg = "#191724", bg = "#EBBCBA", bold = true }
+select_alt = { fg = "#EBBCBA", bg = "#26233A" }
+unset_main = { fg = "#191724", bg = "#EB6F92", bold = true }
+unset_alt = { fg = "#EB6F92", bg = "#26233A" }
 
 [status]
-progress_label = { fg = "#D3C6AA", bold = true }
-progress_normal = { fg = "#A7C080", bg = "#2E383C" }
-progress_error = { fg = "#E67E80", bg = "#2E383C" }
+progress_label = { fg = "#E0DEF4", bold = true }
+progress_normal = { fg = "#C4A7E7", bg = "#26233A" }
+progress_error = { fg = "#EB6F92", bg = "#26233A" }
 
 [input]
-border = { fg = "#A7C080" }
+border = { fg = "#C4A7E7" }
 title = {}
 value = {}
 selected = { reversed = true }
 
 [pick]
-border = { fg = "#A7C080" }
-active = { fg = "#83C092", bold = true }
+border = { fg = "#C4A7E7" }
+active = { fg = "#EBBCBA", bold = true }
 inactive = {}
 
 [cmp]
-border = { fg = "#A7C080" }
-active = { fg = "#83C092", bold = true }
+border = { fg = "#C4A7E7" }
+active = { fg = "#EBBCBA", bold = true }
 inactive = {}
 
 [tasks]
-border = { fg = "#A7C080" }
+border = { fg = "#C4A7E7" }
 title = {}
-hovered = { fg = "#83C092", underline = true }
+hovered = { fg = "#EBBCBA", underline = true }
 
 [which]
-mask = { bg = "#2E383C" }
-cand = { fg = "#7FBBB3" }
-rest = { fg = "#9DA9A0" }
-desc = { fg = "#83C092" }
+mask = { bg = "#26233A" }
+cand = { fg = "#9CCFD8" }
+rest = { fg = "#908CAA" }
+desc = { fg = "#EBBCBA" }
 separator = "  "
-separator_style = { fg = "#7A8478" }
+separator_style = { fg = "#6E6A86" }
 
 [help]
-on = { fg = "#7FBBB3" }
-run = { fg = "#83C092" }
+on = { fg = "#9CCFD8" }
+run = { fg = "#EBBCBA" }
 hovered = { reversed = true, bold = true }
-footer = { fg = "#D3C6AA", bg = "#2E383C" }
+footer = { fg = "#E0DEF4", bg = "#26233A" }
 
 [notify]
-title_info = { fg = "#A7C080" }
-title_warn = { fg = "#83C092" }
-title_error = { fg = "#E67E80" }
+title_info = { fg = "#C4A7E7" }
+title_warn = { fg = "#EBBCBA" }
+title_error = { fg = "#EB6F92" }
 
 # the file list itself: dirs and file kinds carry the palette so yazi matches
 # kitty's ANSI colours (base16), not yazi's built-in defaults. First match wins,
 # so the "*" fallback stays last.
 [filetype]
 rules = [
-	{ mime = "image/*", fg = "#83C092" },
-	{ mime = "{audio,video}/*", fg = "#A7C080" },
-	{ mime = "application/{zip,gzip,x-tar,x-bzip2,x-7z-compressed,x-rar,vnd.rar,x-xz,zstd}", fg = "#A7C080" },
-	{ url = "*", is = "orphan", fg = "#E67E80" },
-	{ url = "*", is = "exec", fg = "#83C092" },
-	{ url = "*/", fg = "#7FBBB3", bold = true },
-	{ url = "*", fg = "#D3C6AA" },
+	{ mime = "image/*", fg = "#EBBCBA" },
+	{ mime = "{audio,video}/*", fg = "#C4A7E7" },
+	{ mime = "application/{zip,gzip,x-tar,x-bzip2,x-7z-compressed,x-rar,vnd.rar,x-xz,zstd}", fg = "#C4A7E7" },
+	{ url = "*", is = "orphan", fg = "#EB6F92" },
+	{ url = "*", is = "exec", fg = "#EBBCBA" },
+	{ url = "*/", fg = "#9CCFD8", bold = true },
+	{ url = "*", fg = "#E0DEF4" },
 ]

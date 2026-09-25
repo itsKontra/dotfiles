@@ -5,123 +5,123 @@ body.theme-dark.theme-dark.theme-dark,
 body.theme-light.theme-light.theme-light {
 
     /* Material 3 RGB helpers */
-    --mat-bg-rgb:             30, 35, 38;
-    --mat-surface-rgb:        30, 35, 38;
-    --mat-on-surface-rgb:     211, 198, 170;
-    --mat-primary-rgb:        167, 192, 128;
-    --mat-on-primary-rgb:     30, 35, 38;
+    --mat-bg-rgb:             25, 23, 36;
+    --mat-surface-rgb:        25, 23, 36;
+    --mat-on-surface-rgb:     224, 222, 244;
+    --mat-primary-rgb:        196, 167, 231;
+    --mat-on-primary-rgb:     25, 23, 36;
 
     /* Core backgrounds */
-    --background-primary:           #1E2326;
-    --background-primary-alt:       #262e31;
-    --background-secondary:         #262e31;
-    --background-secondary-alt:     #2E383C;
+    --background-primary:           #191724;
+    --background-primary-alt:       #1F1D2E;
+    --background-secondary:         #1F1D2E;
+    --background-secondary-alt:     #26233A;
 
     /* Titlebar */
-    --titlebar-background:          #262e31;
-    --titlebar-background-focused:  #262e31;
-    --titlebar-text-color:          #D3C6AA;
+    --titlebar-background:          #1F1D2E;
+    --titlebar-background-focused:  #1F1D2E;
+    --titlebar-text-color:          #E0DEF4;
 
     /* Borders and dividers */
-    --background-modifier-border:         #4c544f;
-    --background-modifier-border-focus:   #7A8478;
-    --background-modifier-border-hover:   #7A8478;
+    --background-modifier-border:         #403D52;
+    --background-modifier-border-focus:   #6E6A86;
+    --background-modifier-border-hover:   #6E6A86;
 
     /* Text colors */
-    --text-normal:      #D3C6AA;
-    --text-muted:       #9DA9A0;
-    --text-faint:       #7A8478;
-    --text-on-accent:   #1E2326;
-    --text-selection:   rgba(167, 192, 128, 0.25);
+    --text-normal:      #E0DEF4;
+    --text-muted:       #908CAA;
+    --text-faint:       #6E6A86;
+    --text-on-accent:   #191724;
+    --text-selection:   rgba(196, 167, 231, 0.25);
 
     /* Accent and interactive */
-    --interactive-accent:           #A7C080;
-    --interactive-accent-hover:     #2E383C;
-    --interactive-accent-rgb:       167, 192, 128;
-    --text-accent:                  #A7C080;
-    --text-accent-hover:            #2E383C;
+    --interactive-accent:           #C4A7E7;
+    --interactive-accent-hover:     #26233A;
+    --interactive-accent-rgb:       196, 167, 231;
+    --text-accent:                  #C4A7E7;
+    --text-accent-hover:            #26233A;
 
     /* Accent HSL triple. Obsidian's core builds --color-accent and the
        theme-facing --color-accent-hsl from --accent-h/s/l, and popular themes
        read that triple directly rather than --interactive-accent, so the
        wallpaper accent has to land here to reach every accent surface. */
-    --accent-h: 83;
-    --accent-s: 34%;
-    --accent-l: 63%;
+    --accent-h: 267;
+    --accent-s: 57%;
+    --accent-l: 78%;
     --color-accent-hsl:       var(--accent-h), var(--accent-s), var(--accent-l);
     --interactive-accent-hsl: var(--color-accent-hsl);
 
     /* Hover and active modifiers */
     --background-modifier-hover:          rgba(var(--mat-on-surface-rgb), 0.06);
     --background-modifier-active-hover:   rgba(var(--mat-primary-rgb), 0.15);
-    --background-modifier-success:        #2E383C;
-    --background-modifier-error:          #E67E80;
-    --background-modifier-error-hover:    #E67E80;
+    --background-modifier-success:        #26233A;
+    --background-modifier-error:          #EB6F92;
+    --background-modifier-error-hover:    #EB6F92;
 
     /* Obsidian color scale */
-    --color-base-00:    #1E2326;
-    --color-base-05:    #262e31;
-    --color-base-10:    #1E2326;
-    --color-base-20:    #262e31;
-    --color-base-25:    #2E383C;
-    --color-base-30:    #495351;
-    --color-base-35:    #5c6660;
-    --color-base-40:    #4c544f;
-    --color-base-50:    #7A8478;
-    --color-base-60:    #9DA9A0;
-    --color-base-70:    #D3C6AA;
-    --color-base-100:   #D3C6AA;
+    --color-base-00:    #191724;
+    --color-base-05:    #1F1D2E;
+    --color-base-10:    #191724;
+    --color-base-20:    #1F1D2E;
+    --color-base-25:    #26233A;
+    --color-base-30:    #403D52;
+    --color-base-35:    #524F67;
+    --color-base-40:    #403D52;
+    --color-base-50:    #6E6A86;
+    --color-base-60:    #908CAA;
+    --color-base-70:    #E0DEF4;
+    --color-base-100:   #E0DEF4;
 
     /* Semantic colors */
-    --color-red:        #E67E80;
-    --color-orange:     #83C092;
-    --color-yellow:     #7FBBB3;
-    --color-green:      #2E383C;
-    --color-cyan:       #2E383C;
-    --color-blue:       #A7C080;
-    --color-purple:     #7FBBB3;
-    --color-pink:       #83C092;
+    --color-red:        #EB6F92;
+    --color-orange:     #EBBCBA;
+    --color-yellow:     #9CCFD8;
+    --color-green:      #26233A;
+    --color-cyan:       #26233A;
+    --color-blue:       #C4A7E7;
+    --color-purple:     #9CCFD8;
+    --color-pink:       #EBBCBA;
 
     /* Headings */
-    --h1-color:     #A7C080;
-    --h2-color:     #A7C080;
-    --h3-color:     #7FBBB3;
-    --h4-color:     #83C092;
-    --h5-color:     #9DA9A0;
-    --h6-color:     #7A8478;
+    --h1-color:     #C4A7E7;
+    --h2-color:     #C4A7E7;
+    --h3-color:     #9CCFD8;
+    --h4-color:     #EBBCBA;
+    --h5-color:     #908CAA;
+    --h6-color:     #6E6A86;
 
     /* Links */
-    --link-color:            #A7C080;
-    --link-color-hover:      #A7C080;
-    --link-external-color:   #83C092;
-    --link-unresolved-color: #7A8478;
+    --link-color:            #C4A7E7;
+    --link-color-hover:      #C4A7E7;
+    --link-external-color:   #EBBCBA;
+    --link-unresolved-color: #6E6A86;
 
     /* Tags */
-    --tag-color:            #A7C080;
-    --tag-background:       #2E383C;
-    --tag-border-color:     #A7C080;
-    --tag-color-hover:      #1E2326;
-    --tag-background-hover: #A7C080;
+    --tag-color:            #C4A7E7;
+    --tag-background:       #26233A;
+    --tag-border-color:     #C4A7E7;
+    --tag-color-hover:      #191724;
+    --tag-background-hover: #C4A7E7;
 
     /* Checkboxes */
-    --checkbox-color:        #A7C080;
-    --checkbox-color-hover:  #2E383C;
-    --checkbox-border-color: #7A8478;
-    --checkbox-marker-color: #1E2326;
+    --checkbox-color:        #C4A7E7;
+    --checkbox-color-hover:  #26233A;
+    --checkbox-border-color: #6E6A86;
+    --checkbox-marker-color: #191724;
 
     /* Code blocks */
-    --code-background:  #262e31;
-    --code-normal:      #D3C6AA;
-    --code-comment:     #7A8478;
-    --code-function:    #A7C080;
-    --code-important:   #E67E80;
-    --code-keyword:     #7FBBB3;
-    --code-operator:    #83C092;
-    --code-property:    #9DA9A0;
-    --code-punctuation: #4c544f;
-    --code-string:      #83C092;
-    --code-tag:         #E67E80;
-    --code-value:       #7FBBB3;
+    --code-background:  #1F1D2E;
+    --code-normal:      #E0DEF4;
+    --code-comment:     #6E6A86;
+    --code-function:    #C4A7E7;
+    --code-important:   #EB6F92;
+    --code-keyword:     #9CCFD8;
+    --code-operator:    #EBBCBA;
+    --code-property:    #908CAA;
+    --code-punctuation: #403D52;
+    --code-string:      #EBBCBA;
+    --code-tag:         #EB6F92;
+    --code-value:       #9CCFD8;
 
     /* Scrollbar */
     --scrollbar-thumb-bg:        rgba(var(--mat-on-surface-rgb), 0.12);
@@ -130,16 +130,16 @@ body.theme-light.theme-light.theme-light {
 
     /* Inputs */
     --input-shadow: none;
-    --input-shadow-hover: 0 0 0 2px #7A8478;
+    --input-shadow-hover: 0 0 0 2px #6E6A86;
 
     /* Graph view */
-    --graph-node:            #A7C080;
-    --graph-node-unresolved: #7A8478;
-    --graph-node-focused:    #A7C080;
-    --graph-node-tag:        #7FBBB3;
-    --graph-node-attachment: #83C092;
-    --graph-line:            #4c544f;
-    --graph-background:      #1E2326;
+    --graph-node:            #C4A7E7;
+    --graph-node-unresolved: #6E6A86;
+    --graph-node-focused:    #C4A7E7;
+    --graph-node-tag:        #9CCFD8;
+    --graph-node-attachment: #EBBCBA;
+    --graph-line:            #403D52;
+    --graph-background:      #191724;
 
 }
 

@@ -1,18 +1,18 @@
 body.matugen {
-  --accent: #83C092;
-  --accent-overlay: #A7C080;
+  --accent: #EBBCBA;
+  --accent-overlay: #C4A7E7;
   
-  --primary: #A7C080;
-  --primary-hover: #2E383C;
+  --primary: #C4A7E7;
+  --primary-hover: #26233A;
   --navbar-accent: var(--primary);
   
-  --background: #1E2326;
-  --body-background: #1E2326;
-  --navbar-background: #2E383C;
+  --background: #191724;
+  --body-background: #191724;
+  --navbar-background: #26233A;
   
   --background-darker: var(--background);
   --current-background: var(--body-background);
-  --navbar-active-background: #495351;
+  --navbar-active-background: #403D52;
 
   --gradient-body-background: linear-gradient(
     90deg,
@@ -25,32 +25,32 @@ body.matugen {
   --modal-background: var(--body-background);
   --modal-border: var(--body-background);
 
-  --success: #83C092;
-  --success-hover: #2E383C;
-  --danger: #E67E80;
-  --danger-hover: #2E383C;
+  --success: #EBBCBA;
+  --success-hover: #26233A;
+  --danger: #EB6F92;
+  --danger-hover: #26233A;
 
-  --text-default: #D3C6AA;
-  --text-title: #D3C6AA;
-  --text-secondary: #9DA9A0;
-  --text-tertiary: #9DA9A0;
-  --text-hover: #A7C080;
+  --text-default: #E0DEF4;
+  --text-title: #E0DEF4;
+  --text-secondary: #908CAA;
+  --text-tertiary: #908CAA;
+  --text-hover: #C4A7E7;
 
-  --text-title: #D3C6AA;
-  --action-icon: #D3C6AA;
-  --action-icon-hover: #A7C080;
-  --action-icon-active: #2E383C;
-  --icons-background: #2E383C;
-  --icon-disabled: #9DA9A0;
+  --text-title: #E0DEF4;
+  --action-icon: #E0DEF4;
+  --action-icon-hover: #C4A7E7;
+  --action-icon-active: #26233A;
+  --icons-background: #1F1D2E;
+  --icon-disabled: #908CAA;
 
   --anticheat-denied: var(--danger);
   --anticheat-broken: var(--accent);
   --anticheat-running: var(--primary);
   --anticheat-supported: var(--success);
-  --anticheat-planned: #7FBBB3;
+  --anticheat-planned: #9CCFD8;
 
-  --neutral-06: #9DA9A0;
-  --gamecard-title-color: #D3C6AAcc;
+  --neutral-06: #908CAA;
+  --gamecard-title-color: #E0DEF4cc;
   --secondary-button: var(--accent);
   --tertiary-button: var(--primary);
 }

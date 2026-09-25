@@ -23,8 +23,6 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 
 # Added by Antigravity CLI installer

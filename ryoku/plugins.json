@@ -4,7 +4,7 @@
     "host": "topbarGlyph",
     "settings": {
       "barBadge": "codec",
-      "autoExpand": true
+      "autoExpand": false
     }
   }
 }

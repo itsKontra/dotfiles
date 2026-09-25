@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Turn a Mechvibes sound pack into a keysounds profile.
 
 Mechvibes packs (mechvibes.com, and the packs in its MIT-licensed repository)
