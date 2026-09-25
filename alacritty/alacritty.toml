@@ -1,0 +1,12 @@
+[general]
+import = ["~/.config/alacritty/colors.toml"]
+live_config_reload = true
+
+# Match kitty's window_margin_width 8
+[window]
+padding = { x = 8, y = 8 }
+dynamic_padding = true
+
+# Match kitty's cursor_shape beam
+[cursor]
+style = { shape = "Beam", blinking = "Off" }

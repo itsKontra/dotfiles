@@ -71,7 +71,6 @@ echo ""
 # Configuration directories to copy from ~/.config into repo root
 CONFIG_DIRS=(
     "hypr"
-    "quickshell"
     "ryoku"
     "ryogami-wall"
     "ryoku-terminal"
@@ -112,7 +111,6 @@ CONFIG_DIRS=(
     "xdg-desktop-portal"
     "xsettingsd"
     "wireplumber"
-    "autostart"
     "Thunar"
     "vesktop"
     "equibop"
@@ -237,6 +235,19 @@ if [[ "$AUTO_PUSH" == true ]]; then
     echo -e "${BLUE}==>${NC} Staging and pushing changes to GitHub..."
     cd "$SCRIPT_DIR"
     git add -A
+
+    # Refuse to push anything that looks like a credential
+    if command -v gitleaks &> /dev/null; then
+        if ! gitleaks protect --staged --no-banner; then
+            echo -e "${RED}gitleaks found possible secrets. Nothing was committed.${NC}"
+            git reset -q
+            exit 1
+        fi
+    elif git diff --cached -U0 | grep -nE '^\+.*((api[_-]?key|secret|password|passwd|token)["'\'']?\s*[:=]\s*["'\'']?[A-Za-z0-9_./+-]{16,}|ghp_[A-Za-z0-9]{36}|github_pat_|sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY)'; then
+        echo -e "${RED}Possible secrets found in the lines above. Nothing was committed.${NC}"
+        git reset -q
+        exit 1
+    fi
 
     if git diff-index --quiet HEAD --; then
         echo -e "${YELLOW}No changes to commit.${NC}"

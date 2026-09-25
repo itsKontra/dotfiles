@@ -1,6 +1,6 @@
 {
     "bgBlur": 2,
-    "heroImage": "file:///home/matthias/Pictures/ryodecors/katana.png",
+    "heroImage": "",
     "heroPosX": 0.5,
     "heroPosY": 0.5,
     "heroStrength": 0.6,
@@ -10,6 +10,6 @@
     "resultSettleMs": 360,
     "showGreeting": true,
     "showWeather": true,
-    "variant": "main",
+    "variant": "hero",
     "weatherUnit": "auto"
 }

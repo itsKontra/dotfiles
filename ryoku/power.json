@@ -1,7 +1,0 @@
-{
-  "profiles": {
-    "performance": {
-      "governor": "performance"
-    }
-  }
-}

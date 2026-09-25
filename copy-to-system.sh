@@ -172,6 +172,11 @@ for item_path in "${SCRIPT_DIR}"/*; do
         continue
     fi
 
+    # Skip anything listed in .gitignore (e.g. quickshell, autostart)
+    if git -C "$SCRIPT_DIR" check-ignore -q "$item_name"; then
+        continue
+    fi
+
     if is_home_dotfile "$item_name"; then
         # Target is ~/
         target_path="${HOME_DIR}/${item_name}"

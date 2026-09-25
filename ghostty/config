@@ -1,22 +1,12 @@
-background = #1E2326
-foreground = #D3C6AA
-cursor-color = #A7C080
-cursor-text = #1E2326
-selection-background = #2E383C
-selection-foreground = #7FBBB3
-palette = 0=#495351
-palette = 1=#E67E80
-palette = 2=#A7C080
-palette = 3=#83C092
-palette = 4=#7FBBB3
-palette = 5=#A7C080
-palette = 6=#7FBBB3
-palette = 7=#9DA9A0
-palette = 8=#7A8478
-palette = 9=#E67E80
-palette = 10=#A7C080
-palette = 11=#83C092
-palette = 12=#7FBBB3
-palette = 13=#A7C080
-palette = 14=#7A8478
-palette = 15=#D3C6AA
+# Your ghostty config. Ryoku seeds this once and never overwrites it, so
+# anything you add here survives updates.
+#
+# ghostty applies config-file includes after this file's own keys, so the
+# palette below lands on top of any colour set here; put colour overrides in
+# user.conf, which loads last and wins.
+
+# theme palette, written by matugen next to this file
+config-file = ryoku-colors
+
+# your overrides; never shipped, loads last. ? = optional, no error if absent
+config-file = ?user.conf

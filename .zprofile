@@ -1,11 +1,15 @@
-#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-#       Hyprland 
-#fi
+# this file is installed as ~/.zprofile for newly created users
 
-# Source /etc/profile to ensure system paths (e.g. flatpak) are available
-if [ -f /etc/profile ]; then
-    source /etc/profile
+# prepend ~/.local/bin and ~/bin to $PATH unless it is already there
+if ! [[ "$PATH" =~ "$HOME/bin" ]]
+then
+    PATH="$HOME/bin:$PATH"
 fi
+if ! [[ "$PATH" =~ "$HOME/.local/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+export PATH
 
 
 # Added by Antigravity CLI installer

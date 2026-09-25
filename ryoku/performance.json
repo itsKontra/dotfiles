@@ -1,7 +1,8 @@
 {
+    "ambientBarMotion": false,
     "autoPowerSaverOnBattery": false,
-    "disableBlur": true,
-    "disableShadows": true,
+    "disableBlur": false,
+    "disableShadows": false,
     "liveWallpaper60": false,
     "lowPowerMode": false,
     "pauseLiveWallpaperWhenFullscreen": true,

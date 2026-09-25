@@ -36,3 +36,20 @@ Partitions/
 DawnCache/
 GPUCache/
 Local Storage/
+
+# Configs I don't want in this repo
+/quickshell/
+/autostart/
+
+# More credential patterns
+.netrc
+.git-credentials
+*.gpg
+*.asc
+*.p12
+*.pfx
+*.kdbx
+auth.json
+credentials*
+*secret*
+*token*

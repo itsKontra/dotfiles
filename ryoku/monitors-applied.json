@@ -1,0 +1,17 @@
+{
+  "monitors": [
+    {
+      "output": "DP-1",
+      "mode": "2560x1440@74.92",
+      "position": "0x0",
+      "scale": 1,
+      "transform": 0,
+      "vrr": 1,
+      "mirror": "",
+      "cm": "srgb",
+      "sdrbrightness": 1,
+      "disabled": false,
+      "id": "ASUSTek COMPUTER INC|PA278CV|LCLMQS251517"
+    }
+  ]
+}
