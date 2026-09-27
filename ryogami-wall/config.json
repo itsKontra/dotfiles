@@ -37,7 +37,7 @@
   },
   "matugen": {
     "schemeType": "scheme-fidelity",
-    "mode": "dark"
+    "mode": "light"
   },
   "integrations": [
     {
@@ -102,36 +102,7 @@
       "displayMode": "wall",
       "sliceSpacing": -30,
       "hexScrollStep": 1,
-      "customPresets": {
-        "C1_wall": {
-          "gridColumns": 6,
-          "gridRows": 3,
-          "gridThumbWidth": 300,
-          "gridThumbHeight": 169
-        },
-        "C2_wall": {
-          "gridColumns": 6,
-          "gridRows": 3,
-          "gridThumbWidth": 300,
-          "gridThumbHeight": 169
-        },
-        "C3_wall": {
-          "gridColumns": 6,
-          "gridRows": 3,
-          "gridThumbWidth": 300,
-          "gridThumbHeight": 169
-        },
-        "C4_wall": {
-          "gridColumns": 6,
-          "gridRows": 3,
-          "gridThumbWidth": 300,
-          "gridThumbHeight": 169
-        }
-      },
-      "gridColumns": 6,
-      "gridRows": 3,
-      "gridThumbWidth": 300,
-      "gridThumbHeight": 169
+      "customPresets": {}
     }
   },
   "wallpaperMute": true,

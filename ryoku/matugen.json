@@ -1,10 +1,10 @@
 {
-  "mode": "smart",
-  "contrast": 0,
+  "mode": "light",
+  "contrast": 0.3,
   "lightnessDark": 0,
   "lightnessLight": 0,
-  "prefer": "lightness",
-  "schemeType": "scheme-neutral",
+  "prefer": "saturation",
+  "schemeType": "scheme-expressive",
   "sourceColorIndex": 0,
   "themeRyokuApps": true,
   "templates": {

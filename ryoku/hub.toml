@@ -1,4 +1,4 @@
 [ui]
-  section = "import"
+  section = "desktop"
   update_interval = "daily"
   advanced = "1"

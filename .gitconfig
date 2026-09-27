@@ -1,25 +1,6 @@
-[user]
-	email = derntl@gmx.net
-	name = itsKontra
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGk1FkfMjTJnsjtO509+2X05D08tTqE4lbqpFxGzmPiH
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[safe]
-	directory = /home/matthias/dev/ryoku-arch
-	directory = /home/matthias/dev/ryoku-arch
-	directory = /home/matthias/dev/ryoku-fedora
-	directory = *
-	directory = /home/matthias/dev/ryoku-fedora
-	directory = *
-	directory = /home/matthias/dev/ryoku-fedora
-	directory = *
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /opt/1Password/op-ssh-sign
-[commit]
-	gpgsign = true

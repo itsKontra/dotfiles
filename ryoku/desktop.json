@@ -13,16 +13,16 @@
       "blurNewOptimizations": true,
       "blurNoise": 0.01,
       "blurPasses": 1,
-      "blurPopups": true,
+      "blurPopups": false,
       "blurSize": 4,
-      "blurSpecial": true,
+      "blurSpecial": false,
       "blurVibrancy": 0.17,
       "blurVibrancyDarkness": 0,
       "blurXray": false,
       "borderAngleSpeed": 3,
-      "borderFollowsPalette": false,
-      "borderPartOfWindow": false,
-      "borderSize": 0,
+      "borderFollowsPalette": true,
+      "borderPartOfWindow": true,
+      "borderSize": 2,
       "dimAround": 0.4,
       "dimInactive": false,
       "dimModal": true,
@@ -30,7 +30,7 @@
       "dimStrength": 0.5,
       "extendBorderGrab": 15,
       "fullscreenOpacity": 1,
-      "gapsIn": 6,
+      "gapsIn": 12,
       "gapsOut": 18,
       "gapsWorkspaces": 0,
       "glowColor": "#ee33cc",
@@ -42,7 +42,7 @@
       "layout": "dwindle",
       "noFocusFallback": false,
       "resizeCorner": 0,
-      "resizeOnBorder": false,
+      "resizeOnBorder": true,
       "rounding": 0,
       "roundingPower": 4,
       "shadowColor": "#000000",
@@ -56,13 +56,12 @@
       "wobblyWindows": false
     },
     "apps": {
-      "browser": "firefox",
       "files": "kitty -e yazi",
       "terminal": "kitty"
     },
     "autostart": [],
     "cursor": {
-      "hideOnKeyPress": true,
+      "hideOnKeyPress": false,
       "inactiveTimeout": 0,
       "size": 24,
       "theme": "Bibata-Modern-Ice"
@@ -72,7 +71,7 @@
       "accelProfile": "",
       "clickfinger": false,
       "disableWhileTyping": true,
-      "followMouse": 2,
+      "followMouse": 1,
       "kbLayout": "de",
       "kbOptions": "",
       "kbVariant": "nodeadkeys",
@@ -82,7 +81,7 @@
       "mouseNaturalScroll": false,
       "mouseScrollFactor": 1,
       "naturalScroll": false,
-      "numlockByDefault": true,
+      "numlockByDefault": false,
       "repeatDelay": 600,
       "repeatRate": 25,
       "sensitivity": 0,
@@ -95,25 +94,8 @@
       "touchScrollFactor": 1,
       "workspaceSwipe": false
     },
-    "keybindRebinds": {
-      "SUPER + grave": "SUPER + SHIFT + grave"
-    },
-    "keybinds": [
-      {
-        "action": "exec",
-        "keys": "SUPER + CTRL + P",
-        "release": false,
-        "value": "1password"
-      }
-    ],
-    "windowRules": [
-      {
-        "action": "float",
-        "class": "",
-        "title": "1Password",
-        "value": ""
-      }
-    ],
+    "keybinds": [],
+    "windowRules": [],
     "windows": {
       "tameMaximizeOnOpen": true
     }
