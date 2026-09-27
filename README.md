@@ -57,6 +57,29 @@ Aliases provided:
 
 ---
 
+## On Ryoku
+
+Ryoku owns most of `~/.config`: its shipped defaults (mirrored in
+`/usr/share/ryoku/config`) are replaced on every update, its theme daemon and
+Settings GUI render files such as `current-theme.conf`, `colors.toml` and
+`hypr/settings.lua`, and some files are per-machine (`fish_variables`,
+`ryoku/monitors-applied.json`). Both scripts detect Ryoku and leave all of
+these alone, sharing the rules in `lib/ryoku.sh`:
+
+- `copy-from-system.sh` exports only what you own and removes Ryoku-managed
+  files an older sync left in the repo.
+- `copy-to-system.sh` merges the repo into `~/.config` file by file instead of
+  replacing whole directories, and never overwrites a Ryoku-managed file.
+
+Keep personal changes in the overrides Ryoku never touches:
+`fish/user.fish`, `kitty/user.conf`, `hypr/user.lua`, and the
+`ryoku/user_edits/` overlay. Both scripts warn when `fish/config.fish`,
+`kitty/kitty.conf` or `hypr/hyprland.lua` carries edits that belong there.
+
+`copy-from-system.sh` needs `rsync` (`sudo dnf install rsync`).
+
+---
+
 ## Repository Structure & Mapping
 
 All configuration directories and files are placed directly in the repository root for clean browsing and easy copying.

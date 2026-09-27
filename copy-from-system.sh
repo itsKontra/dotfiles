@@ -60,6 +60,11 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+if ! command -v rsync &> /dev/null; then
+    echo -e "${RED}rsync is required but not installed (Fedora: sudo dnf install rsync).${NC}"
+    exit 1
+fi
+
 echo -e "${BLUE}==>${NC} Starting dotfiles backup from system to repository..."
 echo -e "    Source ~/.config: ${CONFIG_DIR}"
 echo -e "    Target repo root: ${SCRIPT_DIR}"
@@ -160,6 +165,23 @@ RSYNC_EXCLUDES=(
     "--exclude=.git"
 )
 
+# shellcheck source=lib/ryoku.sh
+source "${SCRIPT_DIR}/lib/ryoku.sh"
+
+# ryoku_excludes <dir>: fills RYOKU_EXCLUDES with an anchored rsync exclude for
+# every Ryoku-managed file under ~/.config/<dir>.
+ryoku_excludes() {
+    local dir="$1" file rel
+    RYOKU_EXCLUDES=()
+    is_ryoku_system || return 0
+    while IFS= read -r -d '' file; do
+        rel="${file#"${CONFIG_DIR}/"}"
+        if is_ryoku_managed "$rel" "$file"; then
+            RYOKU_EXCLUDES+=("--exclude=/${rel#"${dir}/"}")
+        fi
+    done < <(find "${CONFIG_DIR}/${dir}" -type f -print0)
+}
+
 COPIED_COUNT=0
 SKIPPED_COUNT=0
 
@@ -170,12 +192,18 @@ for dir in "${CONFIG_DIRS[@]}"; do
     dst="${SCRIPT_DIR}/${dir}"
 
     if [[ -d "$src" ]]; then
+        ryoku_excludes "$dir"
+        managed=""
+        if [[ ${#RYOKU_EXCLUDES[@]} -gt 0 ]]; then
+            managed=" (skipped ${#RYOKU_EXCLUDES[@]} Ryoku-managed files)"
+        fi
         if [[ "$DRY_RUN" == true ]]; then
-            echo -e "  [SIMULATE] Copying dir: ${dir}"
+            echo -e "  [SIMULATE] Copying dir: ${dir}${managed}"
         else
             mkdir -p "$dst"
-            rsync -a --delete "${RSYNC_EXCLUDES[@]}" "${src}/" "${dst}/"
-            echo -e "  ${GREEN}✓${NC} Copied dir: ${dir}"
+            # --delete-excluded also drops Ryoku-managed files an older sync left behind.
+            rsync -a --delete --delete-excluded "${RSYNC_EXCLUDES[@]}" "${RYOKU_EXCLUDES[@]}" "${src}/" "${dst}/"
+            echo -e "  ${GREEN}✓${NC} Copied dir: ${dir}${managed}"
         fi
         COPIED_COUNT=$((COPIED_COUNT + 1))
     else
@@ -189,7 +217,11 @@ for file in "${CONFIG_FILES[@]}"; do
     src="${CONFIG_DIR}/${file}"
     dst="${SCRIPT_DIR}/${file}"
 
-    if [[ -f "$src" ]]; then
+    if [[ -f "$src" ]] && is_ryoku_system && is_ryoku_managed "$file" "$src"; then
+        echo -e "  - Skipped Ryoku-managed file: ${file}"
+        [[ "$DRY_RUN" == true ]] || rm -f "$dst"
+        SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
+    elif [[ -f "$src" ]]; then
         if [[ "$DRY_RUN" == true ]]; then
             echo -e "  [SIMULATE] Copying file: ${file}"
         else
@@ -220,6 +252,14 @@ for file in "${HOME_FILES[@]}"; do
         SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
     fi
 done
+
+if [[ ${#RYOKU_WARNINGS[@]} -gt 0 ]]; then
+    echo -e "\n${YELLOW}These Ryoku-shipped files were edited locally and were not exported.${NC}"
+    echo -e "${YELLOW}Ryoku replaces them on update; move the changes into the override beside them:${NC}"
+    for rel in "${RYOKU_WARNINGS[@]}"; do
+        echo -e "  ! ~/.config/${rel} -> ~/.config/${RYOKU_OVERRIDE_FOR[$rel]}"
+    done
+fi
 
 echo ""
 echo -e "${GREEN}==>${NC} Finished syncing configurations!"
