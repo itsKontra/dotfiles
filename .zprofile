@@ -10,7 +10,3 @@ then
     PATH="$HOME/.local/bin:$PATH"
 fi
 export PATH
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/matthias/.local/bin:$PATH"

@@ -23,7 +23,3 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/matthias/.local/bin:$PATH"

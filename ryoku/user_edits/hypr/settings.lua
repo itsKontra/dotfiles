@@ -3,10 +3,8 @@
 -- after Ryoku's defaults and before your user.lua, which still wins.
 
 hl.config({
-  general = { gaps_in = 6, border_size = 0, resize_on_border = false, ["col.active_border"] = "rgb(e0563b)", ["col.inactive_border"] = "rgb(313a4d)" },
-  decoration = { border_part_of_window = false, blur = { special = true, popups = true }, shadow = { enabled = false } },
-  input = { kb_layout = "de", kb_variant = "nodeadkeys", kb_options = "", numlock_by_default = true },
-  cursor = { hide_on_key_press = true },
+  decoration = { shadow = { enabled = false } },
+  input = { kb_layout = "de", kb_variant = "nodeadkeys", kb_options = "" },
   animations = { enabled = false },
 })
 
@@ -37,9 +35,6 @@ hl.animation({ leaf = "windows", enabled = true, speed = 3.2, bezier = "ryokuSet
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 7.0, bezier = "easeOutQuint" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 7.0, bezier = "easeOutQuint" })
 
-hl.env("BROWSER", "firefox")
 hl.env("TERMINAL", "kitty")
 
 hl.window_rule({ name = "ryoku-tame-maximize-on-open", match = { class = ".*" }, suppress_event = "maximize" })
-hl.window_rule({ name = "ryoku-user-1", match = { title = "1Password" }, float = true })
-hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("1password"))

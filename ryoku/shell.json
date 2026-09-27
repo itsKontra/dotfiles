@@ -58,7 +58,13 @@
     }
   },
   "clipboard": {
-    "pruneWeekly": false
+    "bottomPercent": 0,
+    "cardRadius": 9,
+    "heightPercent": 42,
+    "paneRadius": 12,
+    "panelRadius": 18,
+    "pruneWeekly": false,
+    "widthPercent": 65
   },
   "dock": {
     "autohide": true,
@@ -68,15 +74,13 @@
     "labels": true,
     "magnify": true,
     "media": false,
-    "pinned": [
-      "kitty",
-      "chromium-browser",
-      "ryovm"
-    ],
-    "shadow": true,
-    "style": "islands"
+    "pinned": [],
+    "shadow": true
   },
   "fontFamily": "Space Grotesk",
+  "fontScale": 1.3,
+  "fontSize": 11,
+  "formatLocale": "de_DE",
   "frameBars": {
     "dock": {
       "pinned": []
@@ -183,6 +187,11 @@
     },
     "version": 1
   },
+  "frameCorner": 8,
+  "frameEnabled": true,
+  "frameOpacity": 1,
+  "frameRadius": 0,
+  "frameThickness": 2,
   "general": {
     "clock_format_24_h": false,
     "temperature_unit": "Metric",
@@ -194,6 +203,7 @@
       "type": "Coordinates"
     }
   },
+  "kairos": {},
   "language": "en",
   "launcherTarget": "quick",
   "menus": {
@@ -299,13 +309,50 @@
       ]
     }
   },
+  "nacre": {
+    "brandClick": "launcher",
+    "edgeMelt": 8,
+    "frame": true,
+    "frameRoundness": 9,
+    "frameSize": 9,
+    "height": 40,
+    "islandGap": 14,
+    "islandScale": 1,
+    "islands": {
+      "center": [
+        "clock",
+        "workspaces",
+        "resources"
+      ],
+      "left": [
+        "brand",
+        "media",
+        "activeWindow"
+      ],
+      "right": [
+        "connectivity",
+        "audio",
+        "battery",
+        "notifications",
+        "tray"
+      ]
+    },
+    "occupiedWorkspaces": true,
+    "opacity": 0.82,
+    "osdScale": 1,
+    "padding": 12,
+    "spacing": 8,
+    "workspaceStyle": "dots"
+  },
   "notifications": {
     "notification_position": "Right",
     "popup_window_margins": 0
   },
+  "obi": {},
+  "osdOpacity": 1,
   "osdRadius": 0,
   "qsbar": {
-    "aiTools": "claude,codex",
+    "aiTools": "claude,codex,opencode",
     "audioBoost": false,
     "barAnim": 0,
     "barAutoHide": false,
@@ -314,22 +361,18 @@
     "barCornerRadius": 6,
     "barFrostEnabled": false,
     "barGapBottom": 0,
-    "barGapLeft": 6,
-    "barGapRight": 6,
-    "barGapTop": 4,
+    "barGapLeft": 0,
+    "barGapRight": 0,
+    "barGapTop": 3,
     "barPosition": "top",
     "barScale": 1,
     "barSeps": [
-      "G1",
-      "G2",
-      "G11"
+      "G1"
     ],
     "barShadowEnabled": false,
     "barShellStyle": "islands",
     "barTemperatureSource": "cpu",
-    "iconOnlyGids": [
-      "G11"
-    ],
+    "iconOnlyGids": [],
     "launcherLogoMode": "icon",
     "layout": {
       "center": [
@@ -346,17 +389,16 @@
         "ai"
       ],
       "right": [
+        "quick",
         "network",
-        "bluetooth",
-        "bluetooth-profiles",
         "power",
         "battery",
         "brightness",
         "cputemp",
         "storage",
         "gpu",
-        "layout",
-        "quick"
+        "bluetooth",
+        "layout"
       ],
       "version": 1
     },
@@ -378,15 +420,17 @@
       "mpris": true,
       "network": true,
       "power": false,
-      "quick": true,
+      "quick": false,
       "status": true,
       "storage": false,
       "volume": true,
       "weather": true
     },
     "workspaceMode": "active",
-    "workspaceStyle": "numbers"
+    "workspaceStyle": "default"
   },
+  "roundness": 0,
+  "screenShader": "",
   "theme": {
     "attributes": {
       "font": {
@@ -409,45 +453,45 @@
     },
     "motion": {
       "reduce": true,
-      "scale": 1.75
+      "scale": 1
     },
-    "theme": "Rose Pine"
+    "theme": "hancore-mechanoonna"
   },
   "themePalette": {
-    "background": "#191724",
-    "error": "#EB6F92",
-    "errorContainer": "#26233A",
-    "inverseOnSurface": "#191724",
-    "inverseSurface": "#E0DEF4",
-    "onBackground": "#E0DEF4",
-    "onError": "#191724",
-    "onErrorContainer": "#EB6F92",
-    "onPrimary": "#191724",
-    "onPrimaryContainer": "#C4A7E7",
-    "onSecondary": "#191724",
-    "onSecondaryContainer": "#9CCFD8",
-    "onSurface": "#E0DEF4",
-    "onSurfaceVariant": "#908CAA",
-    "onTertiary": "#191724",
-    "onTertiaryContainer": "#EBBCBA",
-    "outline": "#6E6A86",
-    "outlineVariant": "#403D52",
-    "primary": "#C4A7E7",
-    "primaryContainer": "#26233A",
-    "scrim": "#191724",
-    "secondary": "#9CCFD8",
-    "secondaryContainer": "#26233A",
-    "shadow": "#191724",
-    "surface": "#191724",
-    "surfaceContainer": "#26233A",
-    "surfaceContainerHigh": "#403D52",
-    "surfaceContainerHighest": "#524F67",
-    "surfaceContainerLow": "#1F1D2E",
-    "surfaceContainerLowest": "#191724",
-    "surfaceTint": "#C4A7E7",
-    "surfaceVariant": "#1F1D2E",
-    "tertiary": "#EBBCBA",
-    "tertiaryContainer": "#26233A"
+    "background": "#1c1b19",
+    "error": "#c5564a",
+    "errorContainer": "#3c3934",
+    "inverseOnSurface": "#1c1b19",
+    "inverseSurface": "#f0e4c5",
+    "onBackground": "#f0e4c5",
+    "onError": "#1c1b19",
+    "onErrorContainer": "#c5564a",
+    "onPrimary": "#1c1b19",
+    "onPrimaryContainer": "#706e6b",
+    "onSecondary": "#1c1b19",
+    "onSecondaryContainer": "#a89984",
+    "onSurface": "#f0e4c5",
+    "onSurfaceVariant": "#fbf1c7",
+    "onTertiary": "#1c1b19",
+    "onTertiaryContainer": "#ebdbb2",
+    "outline": "#afa499",
+    "outlineVariant": "#666059",
+    "primary": "#706e6b",
+    "primaryContainer": "#3c3934",
+    "scrim": "#000000",
+    "secondary": "#a89984",
+    "secondaryContainer": "#3c3934",
+    "shadow": "#000000",
+    "surface": "#1c1b19",
+    "surfaceContainer": "#3c3934",
+    "surfaceContainerHigh": "#645e57",
+    "surfaceContainerHighest": "#817971",
+    "surfaceContainerLow": "#2c2a27",
+    "surfaceContainerLowest": "#1c1b19",
+    "surfaceTint": "#706e6b",
+    "surfaceVariant": "#3c3934",
+    "tertiary": "#ebdbb2",
+    "tertiaryContainer": "#3c3934"
   },
   "wallpaper": {
     "content_fit": "Cover",
@@ -457,5 +501,7 @@
     "video_transcode": false,
     "video_transcode_fps": 24,
     "video_transcode_width": 1920
-  }
+  },
+  "weatherLocation": "",
+  "weatherUnit": "auto"
 }
